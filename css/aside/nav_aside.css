@@ -1,0 +1,11 @@
+.list_nav {
+   cursor: pointer;
+}
+
+.items_list {
+   display: none;
+}
+
+.active {
+   display: block;
+}

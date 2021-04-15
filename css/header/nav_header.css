@@ -1,0 +1,13 @@
+.nav_header a {
+   font-size: 1.2rem;
+   text-shadow: 1px 1px 1px #000;
+   margin-right: 1rem;
+}
+
+.nav_header a:last-child {
+   margin-right: 0;
+}
+
+.nav_header a:hover {
+   border-bottom: 1px solid var(--light-white);
+}

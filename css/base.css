@@ -1,0 +1,12 @@
+:root {
+   --violet: #280B6F;
+   --light-violet: #6730E6;
+   --blue: #7984EE;
+   --light-white: #D2F6FC;
+   --white: #FFFFFF;
+}
+
+body {
+   background-color: hsl(257,82%,10%);
+   color: var(--light-white);
+}
