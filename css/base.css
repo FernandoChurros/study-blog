@@ -10,3 +10,26 @@ body {
    background-color: hsl(257,82%,10%);
    color: var(--light-white);
 }
+
+.o-main {
+   margin: 2.5rem 0;
+}
+
+article a {
+   text-decoration: underline;
+}
+
+p {
+   margin-left: 1.5rem;
+}
+
+.o-main :is(h1, h2, h3) {
+   background: #333;
+   border-radius: 3px;
+   padding: .2rem .5rem;
+   width: max-content;
+}
+
+h3 {
+   font-size: 1.5rem;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+   <meta charset="UTF-8">
+   <meta name="author" content="Fernando Churros">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="icon" href="../assets/favicon_io-astolfo/favicon.ico">
+   <title>Blog</title>
+
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/grid.css">
+   <link rel="stylesheet" href="../css/base.css">
+   <link rel="stylesheet" href="../css/container.css">
+   <link rel="stylesheet" href="../css/header/header.css">
+   <link rel="stylesheet" href="../css/header/nav_header.css">
+   <link rel="stylesheet" href="../css/logo.css">
+   <link rel="stylesheet" href="../css/aside/aside.css">
+   <link rel="stylesheet" href="../css/aside/nav_aside.css">
+   <link rel="stylesheet" href="../css/pre_formated.css">
+   <link rel="stylesheet" href="../css/articles.css">
+   <link rel="stylesheet" href="../css/image.css">
+</head>
+
+<body>
+   <div class="body container">
+      <header class="o-header">
+         <img class="logo" src="../assets/favicon_io-astolfo/favicon.ico" alt="Logo do Blog.">
+
+         <nav class="nav_header">
+            <a href="../index.html">Ínicio</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+         </nav>
+      </header>
+
+      <aside class="o-aside">
+         <h2>Categorias</h2>
+
+         <nav class="nav_aside">
+            <ul>
+               <li><span class="list_nav">HTML</span>
+
+                  <ul class="items_list">
+
+                     <li><a href="#">Item</a></li>
+                     <li><a href="#">Item</a></li>
+                  </ul>
+               </li>
+
+               <li><span class="list_nav">CSS</span>
+
+                  <ul class="items_list">
+
+                     <li><a href="#">Item</a></li>
+                     <li><a href="#">Item</a></li>
+                  </ul>
+               </li>
+
+               <li><span class="list_nav">JavaScript</span>
+
+                  <ul class="items_list">
+
+                     <li><a href="../pages/tipe-of-datas.html">Tipos de dados</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </nav>
+      </aside>
+
+      <main class="o-main">
+         <section>
+            <h1>Tipos de Dados</h1>
+
+            <ol>
+
+               <li><a href="#">String</a></li>
+               <li><a href="#">Number</a></li>
+               <li><a href="#">Boolean</a></li>
+               <li><a href="#">Undefined vs null</a></li>
+               <li><a href="#">Object</a></li>
+               <li><a href="#">Array</a></li>
+            </ol>
+
+            <article class="articles"> <!-- STRING -->
+               <h2>String</h2>
+
+               <p>String é uma cadeia de caracteres, que formam frases ou palavras, mas é necessaŕio colocar esse texto entre aspas simples(' '), aspas duplas(" ") ou crase(` `, que também são chamada de <a href="#">template strings</a>), se um texto é inserido sem estar entre um desses três mencionados, o JavaScript não entende como uma string.</p>
+
+               <p>Vale ressaltar que aspas duplas ou simples, não permitem escrever um multiplas linhas, apenas usando as crases</p>
+
+               <pre class="pre_formated">
+
+                  "
+                     não é permitido.
+                  "
+
+                  `
+                     é permitido.
+                  `
+               </pre>
+
+               <p>Exemplo: </p>
+               <img class="image" src="../assets/string.png" alt="">
+               <p>Tirando a prova real, pedindo pra verificar o tipo do item que queremos (typeof), podemos perceber que é necessário o texto estar dentro de aspas para ser considerado uma string.</p>
+               <p>Você pode teste isso abrindo o console do próprio navegador, para isto é só pressionar a teclas F12, e ir para aba com o nome "console".</p>
+            </article>
+
+            <article class="articles"> <!-- NUNBER -->
+               <h2>Number</h2>
+
+               <dl>
+                  <dt>Inteiros</dt>
+                  <dd>Os números inteiros são os números negativos e positivos, incluindo o zero, que não apresentam parte decimal.</dd>
+
+                  <dt>Reais</dt>
+                  <dd>Os números reais é o conjunto de elementos, que inclui os n° naturais, inteiros, racionais e irracionais, resumindo, um número real pode ser qualquer número. </dd>
+
+                  <dt>NaN</dt>
+                  <dd>NaN é um acrônimo para Not a Number, que seria um "Não é um Número".</dd>
+
+                  <dt>Infinity</dt>
+                  <dd>O próprio nome já fala por si só, é um número infinito, pode ser positivo ou negativo.</dd>
+               </dl>
+
+               <h3>Representando um Number no JavaScript</h3>
+
+               <p>Para representar um número no JavaScript, é só inserir ele normalmente, sem estar entre aspas, que se feito isso, ele passará a ser uma string. Lembrando que usei o typeof para ver o tipo do valor inserido.</p>
+               <img class="image" src="../assets/number.png" alt="">
+
+               <h3>NaN</h3>
+
+               <p>Um NaN é quando o JavaScript não considera algo um número</p>
+
+               <p>Fazer operações com dados que não são considerados números, o JavaScript retorna um NaN, com exceção ao operador de soma (+), que tem a função extra de concatenação, que é juntar uma parte do código com outra. Se ficou confuso, de uma olhada no artigo sobre <a href="#">Operadores Lógicos</a>.</p>
+
+               <pre class="pre_formated">
+                  <img src="../assets/NaN.png" alt="" class="image">
+               </pre>
+            </article>
+
+            <article class="articles"> <!-- BOOLEAN -->
+               <h2>Boolean</h2>
+
+               <p>Boolean ou boleano, é um tipo de dado que só tem dois valores, ou dois estados, que é, true (verdadeiro) ou false (falso), é um tipo de dado bem simples, mas essencial para a lógica de programação.</p>
+
+               <p>O valor boleano e usado pra saber se algo é verdairo ou não.</p>
+
+               <img src="../assets/boolean.png" alt="" class="image">
+               <p>Aqui usamos o operador lógico de igualdade (==), mas podemos usar outros operadores de comparação, como, maior que (&gt;), maior ou igual que (⩾). Se ficou confuso, veja este artigo sobre <a href="#">Operadores Lógicos</a>.</p>
+            </article>
+         </section>
+      </main>
+
+      <footer class="o-footer">
+      </footer>
+   </div>
+
+
+   <script defer src="../js/script.js"></script>
+</body>
+
+</html>
+</body>
+</html>

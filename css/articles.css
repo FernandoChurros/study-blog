@@ -1,0 +1,6 @@
+.articles {
+   display: flex;
+   flex-direction: column;
+   grid-gap: 1rem;
+   margin: 4rem 0;
+}

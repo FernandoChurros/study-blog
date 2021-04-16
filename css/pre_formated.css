@@ -1,0 +1,8 @@
+.pre_formated {
+   background-color: rgba(0, 0, 0, .3 );
+   border: 1px solid var(--light-white);
+   border-radius: 10px;
+   text-align: left;
+   padding: .5rem;
+   width: 500px;
+}

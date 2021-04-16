@@ -3,9 +3,11 @@
 }
 
 .items_list {
-   display: none;
+   position: absolute;
+   left: -10000px;
 }
 
 .active {
-   display: block;
+   position: static;
+   transition: left 1s;
 }
