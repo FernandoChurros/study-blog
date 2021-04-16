@@ -1,6 +1,10 @@
-.articles {
+.articles, .div_article {
    display: flex;
    flex-direction: column;
    grid-gap: 1rem;
+   margin: 2rem 0;
+}
+
+.articles {
    margin: 4rem 0;
 }
