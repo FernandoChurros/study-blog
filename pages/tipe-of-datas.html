@@ -76,15 +76,36 @@
 
             <ol>
 
-               <li><a href="#">String</a></li>
-               <li><a href="#">Number</a></li>
-               <li><a href="#">Boolean</a></li>
-               <li><a href="#">Undefined vs null</a></li>
-               <li><a href="#">Object</a></li>
-               <li><a href="#">Array</a></li>
+               <li><a href="#article_string">String</a></li>
+               <li><a href="#article_number">Number</a></li>
+               <li><a href="#article_boolean">Boolean</a></li>
+               <li><a href="#article_undefined-null">Undefined vs null</a></li>
+               <li><a href="#article_object">Object</a></li>
+               <li><a href="#article_array">Array</a></li>
             </ol>
 
-            <article class="articles"> <!-- STRING -->
+            <div class="articles">
+               <h2>Introdução</h2>
+               <p>Conform o ECMAScript standard, temos 9 tipos de dados:</p>
+
+               <dl>
+                  <dt>Tipos de Dados</dt>
+                  <dd>Primitivo / Valor Primitivo</dd>
+                  <dd>Estrutural</dd>
+                  <dd>Estrutural primitivo</dd>
+
+                  <dt>Primitivos</dt>
+                  <dd>Valores primitivos não são objetos, e são imutáveis, ele não sofrem alteração. São eles: String, Number, Boolean, Undefined, Symbol e BigInt.</dd>
+
+                  <dt>Estruturais</dt>
+                  <dd>Tem uma estrutura em si, recebendo atributos, e métodos. São eles: Functions e Object, que engloba Array, Map, Set, Date e etc...</dd>
+
+                  <dt>Primitivos Estruturais</dt>
+                  <dd>É um tipo de dado primitivo, e ao mesmo tempo estrutural, o único tipo é o null.</dd>
+               </dl>
+            </div>
+
+            <article id="article_string" class="articles"> <!-- STRING -->
                <h2>String</h2>
 
                <p>String é uma cadeia de caracteres, que formam frases ou palavras, mas é necessaŕio colocar esse texto entre aspas simples(' '), aspas duplas(" ") ou crase(` `, que também são chamada de <a href="#">template strings</a>), se um texto é inserido sem estar entre um desses três mencionados, o JavaScript não entende como uma string.</p>
@@ -108,7 +129,7 @@
                <p>Você pode teste isso abrindo o console do próprio navegador, para isto é só pressionar a teclas F12, e ir para aba com o nome "console".</p>
             </article>
 
-            <article class="articles"> <!-- NUNBER -->
+            <article id="article_number" class="articles"> <!-- NUNBER -->
                <h2>Number</h2>
 
                <dl>
@@ -141,7 +162,7 @@
                </pre>
             </article>
 
-            <article class="articles"> <!-- BOOLEAN -->
+            <article id="article_boolean" class="articles"> <!-- BOOLEAN -->
                <h2>Boolean</h2>
 
                <p>Boolean ou boleano, é um tipo de dado que só tem dois valores, ou dois estados, que é, true (verdadeiro) ou false (falso), é um tipo de dado bem simples, mas essencial para a lógica de programação.</p>
@@ -152,7 +173,7 @@
                <p>Aqui usamos o operador lógico de igualdade (==), mas podemos usar outros operadores de comparação, como, maior que (&gt;), maior ou igual que (⩾). Se ficou confuso, veja este artigo sobre <a href="#">Operadores Lógicos</a>.</p>
             </article>
 
-            <articles class="articles"> <!-- UNDEFINED VS NULL -->
+            <article id="article_undefined-null" class="articles"> <!-- UNDEFINED VS NULL -->
                <h2>Undefined vs Null</h2>
 
                <div class="div_article">
@@ -171,9 +192,9 @@
                </div>
 
                <p>Nota: Null existe, mas não tem nada dentro dele, e undefined é algo que não existe.</p>
-            </articles>
+            </article>
 
-            <article class="articles"> <!-- OBJECT -->
+            <article id="article_object" class="articles"> <!-- OBJECT -->
                <h2>Object</h2>
 
                <p>Object ou objeto, é um dado estrutural, que cria uma estrutura.</p>
@@ -203,10 +224,24 @@
                <p>Aqui estou declarando uma funcionalidade para meu objeto, e chamamos isso de método. Artigo sobre <a href="#">Function</a>.</p>
             </article>
 
-            <article class="articles"> <!-- ARRAYS -->
-               <h2>Arrays</h2>
+            <article id="article_array" class="articles"> <!-- ARRAY -->
+               <h2>Array</h2>
 
-               
+               <p>Arrays, vetores ou variável composta, é outra forma de estruturar dados, é um agrupamento de dados em forma de listas.</p>
+
+               <p>Cada elemento dentro de um array tem um valor/conteúdo e uma chave de indentificação/índice, essa chave começa o contagem do número zero.</p>
+
+               <h3>Declarando um Array</h3>
+
+               <p>Abrimos e fechamos colchetes, e separamos os elementos por vírgula.</p>
+
+               <pre class="pre_formated">
+                  
+                  [
+                     "maça", "laranja", "banana"
+                  ]
+               </pre>
+               <p>O primeiro valor é o índice zero, o segundo valor é o índice 1, e assim por diante. </p>
             </article>
          </section>
       </main>
