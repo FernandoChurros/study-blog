@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+   <meta charset="UTF-8">
+   <meta name="author" content="Fernando Churros">
+   <meta name="description" content="Um blog simples que faço para consolidar meus conhecimentos">
+   <meta name="keywords" content="html, css, js, javascript, blog, front-end">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="icon" href="../assets/favicon_io-astolfo/favicon.ico">
+   <title>Blog</title>
+
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/grid.css">
+   <link rel="stylesheet" href="../css/base.css">
+   <link rel="stylesheet" href="../css/container.css">
+   <link rel="stylesheet" href="../css/header/header.css">
+   <link rel="stylesheet" href="../css/header/nav_header.css">
+   <link rel="stylesheet" href="../css/logo.css">
+   <link rel="stylesheet" href="../css/aside/aside.css">
+   <link rel="stylesheet" href="../css/aside/nav_aside.css">
+   <link rel="stylesheet" href="../css/pre_formated.css">
+   <link rel="stylesheet" href="../css/articles.css">
+   <link rel="stylesheet" href="../css/image.css">
+</head>
+
+<body>
+   <div class="body container">
+      <header class="o-header">
+         <img class="logo" src="../assets/favicon_io-astolfo/favicon.ico" alt="Logo do Blog.">
+
+         <nav class="nav_header">
+            <a href="../index.html">Ínicio</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+         </nav>
+      </header>
+
+      <aside class="o-aside">
+         <h2>Categorias</h2>
+
+         <nav class="nav_aside">
+            <ul>
+               <li><span class="list_nav">HTML</span>
+
+                  <ul class="items_list">
+
+                     <li><a href="#">Item</a></li>
+                     <li><a href="#">Item</a></li>
+                  </ul>
+               </li>
+
+               <li><span class="list_nav">CSS</span>
+
+                  <ul class="items_list">
+
+                     <li><a href="#">Item</a></li>
+                     <li><a href="#">Item</a></li>
+                  </ul>
+               </li>
+
+               <li><span class="list_nav">JavaScript</span>
+
+                  <ul class="items_list">
+
+                     <li><a href="../pages/tipe-of-datas.html">Tipos de dados</a></li>
+                     <li><a href="../pages/functions.html">Funções</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </nav>
+      </aside>
+
+      <main class="o-main">
+         <section>
+            <h1>Variáveis</h1>
+
+            <ol>
+               <li><a href="#">Criando variáveis</a></li>
+               <li><a href="#">Scope</a></li>
+               <li><a href="#">Var x Let x Const</a></li>
+               <li><a href="#">Nomeando variáveis</a></li>
+            </ol>
+
+            <div class="articles"> <!-- INTRODUÇÃO -->
+               <h2>Introdução</h2>
+               <p>Variáveis são nomes simbólicos que vão receber algum valor.</p>
+               <p>O JavaScript é uma linguagem fracamente tipada e dinâmica, quer dizer que não precisamos especificar um tipo para nossa variável, quando você atribui um valor a ela, por baixo do panos o JavaScript defini automaticamente o tipo que ela será, podendo mais para frente, mudar o seu tipo, diferente de outras linguagens que isso não é possível.</p>
+            </div>
+
+            <article class="articles"> <!-- CRIANDO VARIÁVEIS -->
+               <h2>Criando variáveis</h2>
+
+               <p>Para criar uma variável, exitem 3 maneiras, são elas: var, let e const, cada uma tem um comportamento diferente que iremos abordar.</p>
+
+               <h3>Sintaxe</h3>
+
+               <p>Primeiro declaramos uma palavra reservada para criar uma variável, usaremos a palavra let, depois escolha um nome que coincide com o valor que será atribuido, logo em seguida atribuimos o valor com o sinal ( = ).</p>
+
+               <pre class="pre_formated">
+                  
+                  var foo = 'valor';
+                  let foo = 'valor';
+                  const foo = 'valor';
+               </pre>
+
+               <p>Note que usamos o operador de igualdade ( = ), mas neste caso esse operador tem a função de atribuição, ele está atribuindo um valor a variável de nome 'foo', você pode usar qualquer nome pra uma variável, e quando invocar a mesma, ela retornará o que está dentro dela, no caso o valor que foi atribuido a ela.</p>
+
+               <pre class="pre_formated">
+                  
+                  let fruta = 'Banana';
+                  console.log(fruta);
+                  Banana
+               </pre>
+               <p>Não é necessário colocar o nome da variável em aspas, por você não quer a palavra fruta, e sim o que está dentro da variável fruta, que será o valor atribuido, podendo ser uma string, number, array, objeto e etc. Se não souber nada disso, de uma olhada em <a href="./tipe-of-datas.html">Tipos de Dados</a>.</p>
+            </article>
+
+            <article class="articles"> <!-- SCOPE -->
+               <h2>Scope</h2>
+
+               <p>O escopo determina a visibilidade de uma variável no JavaScript</p>
+
+               <p>O escopo é determinado pelos colchetes ( {} ), tudo o que estiver dentro do colchetes, é um bloco de código</p>
+               <pre class="pre_formated">
+                  
+                  {
+                     let fruta = 'Banana';
+                     console.log(fruta);
+                     Banana
+                  }
+               </pre>
+               <p>O escopo de um bloco, é tudo o que está dentro dos colchetes.</p>
+            </article>
+
+            <article class="articles"> <!-- VAR X LET X CONST -->
+               <h2>Var x Let x Const</h2>
+
+               <dl>
+                  <dt>Global</dt>
+                  <dd>É tudo o que está executando na minha aplicação, em todo o seu arquivo .js</dd>
+
+                  <dt>Local</dt>
+                  <dd>É somente o que existe dentro de um escopo</dd>
+               </dl>
+
+               <div class="articles">
+                  <h3>Var</h3>
+                  <p>A palavra reservada var, defini uma variável com um escopo global, e local, podendo funcionar fora do escopo de um bloco</p>
+                  <p>O JavaScript cria a variável var no começo de sua execução, e só depois atribui um valor a ela</p>
+
+                  <pre class="pre_formated">
+                     
+                     {
+                        let animal = 'Jabuti';
+                        console.log(animal);
+                        Jabuti
+                     }
+                     console.log(animal);
+                     Jabuti
+                  </pre>
+               </div>
+
+               <div class="articles">
+                  <h3>Let e Const</h3>
+
+                  <p>Let e const são variáveis locais, e só funcionam dentro do escopo em que foram criadas.</p>
+
+                  <pre class="pre_formated">
+                     
+                     {
+                        let animal = 'Tartaruga';
+                        console.log(animal);
+                        Tartaruga
+                     }
+                     console.log(animal)
+                     *Isso irá resulta em um erro de referência, 
+                     em que animal não foi denifido*
+
+                  </pre>
+                  <p>Outra característica do const, é que não pode ser reatribuido um valor</p>
+
+                  <pre class="pre_formated">
+                     
+                     {
+                        const fruta = 'Laranja';
+                        fruta = 'Maça';
+                        *Resultará um um erro*
+                     }
+                  </pre>
+               </div>
+            </article>
+
+            <article class="articles"> <!-- NOMEANDO VARIÁVEIS -->
+               <h2>Nomenado variáveis</h2>
+
+               <p>O JavaScript é casa-sensitive(sensível ao caso), e aceita a cadeia de caracteres Unicode.</p>
+
+               <ul>
+                  <li>Permitido
+                     <ul>
+                        <li>Iniciar com estes caractes especiais: $ e _</li>
+                        <li>Iniciar com letras</li>
+                        <li>Colocar acentos</li>
+                        <li>Letras minúsculas e maiúsculas, fazem a diferença</li>
+                     </ul>
+                  </li>
+
+                  <li>Não é permitido
+                     <ul>
+                        <li>Iniciar com números</li>
+                        <li>Colocar espaços vazios no nome</li>
+                     </ul>
+                  </li>
+
+                  <li>Dicas
+                     <ul>
+                        <li>Criar nomes que fazem sentido</li>
+                        <li>Que explique o que a variável é ou faz</li>
+                        <li><a href="https://pt.wikipedia.org/wiki/CamelCase" target="_blank">camelCase</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank">snake_case</a></li>
+                        <li>Escrever em inglês</li>
+                     </ul>
+                  </li>
+               </ul>
+            </article>
+         </section>
+      </main>
+
+      <footer class="o-footer">
+      </footer>
+   </div>
+
+
+   <script defer src="../js/script.js"></script>
+</body>
+</html>
